@@ -14,35 +14,35 @@
  *
  */
 
-class SEO_Authorship_SiteConfig_DataExtension extends DataExtension {
+class SEO_Authorship_SiteConfig_DataExtension extends DataExtension
+{
 
 
-	/* Overload Model
-	------------------------------------------------------------------------------*/
+    /* Overload Model
+    ------------------------------------------------------------------------------*/
 
-	private static $db = array(
-		'GoogleProfileID' => 'Varchar(128)',
-	);
+    private static $db = array(
+        'GoogleProfileID' => 'Varchar(128)',
+    );
 
 
-	/* Overload Methods
-	------------------------------------------------------------------------------*/
+    /* Overload Methods
+    ------------------------------------------------------------------------------*/
 
-	// CMS Fields
-	public function updateCMSFields(FieldList $fields) {
+    // CMS Fields
+    public function updateCMSFields(FieldList $fields)
+    {
 
-		// owner
-		$owner = $this->owner;
+        // owner
+        $owner = $this->owner;
 
-		//// Authorship
+        //// Authorship
 
-		$tab = 'Root.SEO.Authorship';
+        $tab = 'Root.SEO.Authorship';
 
-		// add fields
-		$fields->addFieldsToTab($tab, array(
-			TextField::create('GoogleProfileID', 'Publisher Google+ Profile ID'),
-		));
-
-	}
-
+        // add fields
+        $fields->addFieldsToTab($tab, array(
+            TextField::create('GoogleProfileID', 'Publisher Google+ Profile ID'),
+        ));
+    }
 }
